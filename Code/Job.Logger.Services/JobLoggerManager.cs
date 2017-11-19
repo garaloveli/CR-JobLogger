@@ -14,11 +14,6 @@ namespace Job.Logger.Services
 
         public static IJobLoggerManager Logger = new JobLoggerManager();
 
-        //private static Lazy<IJobLoggerManager> instance = new Lazy<IJobLoggerManager>(() => { return new JobLoggerManager(); });
-        //public static IJobLoggerManager Instance {
-        //    get { return instance.Value; }
-        //}
-
         #endregion
     }
 
@@ -35,6 +30,7 @@ namespace Job.Logger.Services
         public void InitializeManager(ProviderKind allowedProviders, MessageKind allowedMessages)
         {
             logProviders = new List<IJobLoggerProvider>();
+
             if (allowedProviders.HasFlag(ProviderKind.File) || allowedProviders.HasFlag(ProviderKind.All))
             {
                 logProviders.Add(new FileProvider());
