@@ -9,7 +9,8 @@ namespace Job.Logger.Console
     {
         public static void Main(string[] args)
         {
-            IJobLoggerManager manager = new JobLoggerManager();
+            IJobLoggerManager manager = Shell.Logger;
+
             manager.InitializeManager(ProviderKind.All, MessageKind.Error | MessageKind.Warning | MessageKind.Success);
 
             manager.WriteError("Testing error message");

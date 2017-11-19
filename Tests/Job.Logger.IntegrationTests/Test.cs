@@ -17,7 +17,7 @@ namespace Job.Logger.IntegrationTests
         {
             var message = String.Format("Integration test for FILE logger on {0}", DateTime.UtcNow.ToString());
 
-            IJobLoggerManager manager = new JobLoggerManager();
+            IJobLoggerManager manager = Shell.Logger;
             manager.InitializeManager(ProviderKind.File, Core.MessageKind.All);
 
             manager.WriteError(message);
@@ -49,7 +49,7 @@ namespace Job.Logger.IntegrationTests
         {
             var message = String.Format("Integration test for DATABASE logger on {0}", DateTime.UtcNow.ToString());
 
-            IJobLoggerManager manager = new JobLoggerManager();
+            IJobLoggerManager manager = Shell.Logger;
             manager.InitializeManager(ProviderKind.Database, Core.MessageKind.All);
 
             manager.WriteError(message);

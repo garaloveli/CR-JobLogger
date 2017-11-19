@@ -6,18 +6,35 @@ using Job.Logger.Services.Providers;
 
 namespace Job.Logger.Services
 {
+
+    public class Shell
+    {
+
+        #region Singleton
+
+        public static IJobLoggerManager Logger = new JobLoggerManager();
+
+        //private static Lazy<IJobLoggerManager> instance = new Lazy<IJobLoggerManager>(() => { return new JobLoggerManager(); });
+        //public static IJobLoggerManager Instance {
+        //    get { return instance.Value; }
+        //}
+
+        #endregion
+    }
+
     public class JobLoggerManager : IJobLoggerManager
     {
         private List<IJobLoggerProvider> logProviders;
         private LogMessageFactory logFactory;
 
-        public JobLoggerManager()
+        internal JobLoggerManager()
         {
             logProviders = new List<IJobLoggerProvider>();
         }
 
         public void InitializeManager(ProviderKind allowedProviders, MessageKind allowedMessages)
         {
+            logProviders = new List<IJobLoggerProvider>();
             if (allowedProviders.HasFlag(ProviderKind.File) || allowedProviders.HasFlag(ProviderKind.All))
             {
                 logProviders.Add(new FileProvider());
