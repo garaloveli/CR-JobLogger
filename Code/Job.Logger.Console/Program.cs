@@ -16,6 +16,7 @@ namespace Job.Logger.Console
             manager.WriteMessage("Testing message message");
             manager.WriteWarning("Testing warning message");
             manager.WriteSuccess("Testing success message");
+
             System.Console.ReadKey();
         }
     }
