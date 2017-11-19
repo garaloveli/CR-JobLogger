@@ -1,7 +1,19 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Job.Logger.Console", "Job.Logger.Console\Job.Logger.Console.csproj", "{B0FB5BEA-EEF9-4CEF-8B68-771A65B031C6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{04933E64-AF2A-4DBA-9291-1CBFC4E6E1EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9C62390D-8909-4A80-97ED-60C87E7F0532}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Job.Logger.Console", "Code\Job.Logger.Console\Job.Logger.Console.csproj", "{B0FB5BEA-EEF9-4CEF-8B68-771A65B031C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Job.Logger.Core", "Code\Job.Logger.Core\Job.Logger.Core.csproj", "{7BC72C89-DBB5-42A1-BF44-A00179173230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Job.Logger.Services", "Code\Job.Logger.Services\Job.Logger.Services.csproj", "{BBC5B8EF-4851-4909-BFB7-234E7AEC5F44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Job.Logger.UnitTests", "Tests\Job.Logger.UnitTests\Job.Logger.UnitTests.csproj", "{60EC6F0A-C590-41FF-9CB8-54D2822823BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Job.Logger.IntegrationTests", "Tests\Job.Logger.IntegrationTests\Job.Logger.IntegrationTests.csproj", "{718E7473-F65B-4988-B134-BA2B9C38565B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +25,27 @@ Global
 		{B0FB5BEA-EEF9-4CEF-8B68-771A65B031C6}.Debug|x86.Build.0 = Debug|x86
 		{B0FB5BEA-EEF9-4CEF-8B68-771A65B031C6}.Release|x86.ActiveCfg = Release|x86
 		{B0FB5BEA-EEF9-4CEF-8B68-771A65B031C6}.Release|x86.Build.0 = Release|x86
+		{7BC72C89-DBB5-42A1-BF44-A00179173230}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7BC72C89-DBB5-42A1-BF44-A00179173230}.Debug|x86.Build.0 = Debug|Any CPU
+		{7BC72C89-DBB5-42A1-BF44-A00179173230}.Release|x86.ActiveCfg = Release|Any CPU
+		{7BC72C89-DBB5-42A1-BF44-A00179173230}.Release|x86.Build.0 = Release|Any CPU
+		{BBC5B8EF-4851-4909-BFB7-234E7AEC5F44}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BBC5B8EF-4851-4909-BFB7-234E7AEC5F44}.Debug|x86.Build.0 = Debug|Any CPU
+		{BBC5B8EF-4851-4909-BFB7-234E7AEC5F44}.Release|x86.ActiveCfg = Release|Any CPU
+		{BBC5B8EF-4851-4909-BFB7-234E7AEC5F44}.Release|x86.Build.0 = Release|Any CPU
+		{60EC6F0A-C590-41FF-9CB8-54D2822823BC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{60EC6F0A-C590-41FF-9CB8-54D2822823BC}.Debug|x86.Build.0 = Debug|Any CPU
+		{60EC6F0A-C590-41FF-9CB8-54D2822823BC}.Release|x86.ActiveCfg = Release|Any CPU
+		{60EC6F0A-C590-41FF-9CB8-54D2822823BC}.Release|x86.Build.0 = Release|Any CPU
+		{718E7473-F65B-4988-B134-BA2B9C38565B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{718E7473-F65B-4988-B134-BA2B9C38565B}.Debug|x86.Build.0 = Debug|Any CPU
+		{718E7473-F65B-4988-B134-BA2B9C38565B}.Release|x86.ActiveCfg = Release|Any CPU
+		{718E7473-F65B-4988-B134-BA2B9C38565B}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7BC72C89-DBB5-42A1-BF44-A00179173230} = {04933E64-AF2A-4DBA-9291-1CBFC4E6E1EB}
+		{BBC5B8EF-4851-4909-BFB7-234E7AEC5F44} = {04933E64-AF2A-4DBA-9291-1CBFC4E6E1EB}
+		{60EC6F0A-C590-41FF-9CB8-54D2822823BC} = {9C62390D-8909-4A80-97ED-60C87E7F0532}
+		{718E7473-F65B-4988-B134-BA2B9C38565B} = {9C62390D-8909-4A80-97ED-60C87E7F0532}
 	EndGlobalSection
 EndGlobal
