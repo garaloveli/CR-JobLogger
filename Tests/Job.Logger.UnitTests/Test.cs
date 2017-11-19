@@ -28,7 +28,7 @@ namespace Job.Logger.UnitTests
             var type = MessageType.Warning;
 
             var testFactory = new LogMessageFactory(MessageKind.Warning);
-            var testObject = testFactory.ErrorMessage(message);
+            var testObject = testFactory.WarningMessage(message);
 
             Assert.AreEqual(message, testObject.Message);
             Assert.AreEqual(type, testObject.LogMessageType);
@@ -36,13 +36,13 @@ namespace Job.Logger.UnitTests
         }
 
         [Test()]
-        public void TestInformativeMessageCreation()
+        public void TestMessageCreation()
         {
             var message = DateTime.UtcNow.ToString();
             var type = MessageType.Message;
 
             var testFactory = new LogMessageFactory(MessageKind.Message);
-            var testObject = testFactory.ErrorMessage(message);
+            var testObject = testFactory.Message(message);
 
             Assert.AreEqual(message, testObject.Message);
             Assert.AreEqual(type, testObject.LogMessageType);
@@ -55,10 +55,10 @@ namespace Job.Logger.UnitTests
             var message = DateTime.UtcNow.ToString();
             var type = MessageType.Success;
 
-            var formattedMessage = String.Format("DATE: {0}, MESSAGE: {1}, TYPE: {2}", DateTime.UtcNow.ToShortDateString(), message, type);
+            var formattedMessage = String.Format("DATE: {0}, MESSAGE: {1}, TYPE: {2}", DateTime.UtcNow, message, type);
 
             var testFactory = new LogMessageFactory(MessageKind.Success);
-            var testObject = testFactory.ErrorMessage(message);
+            var testObject = testFactory.SuccessMessage(message);
 
             Assert.AreEqual(formattedMessage, testObject.FormattedMessage);
         }

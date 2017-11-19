@@ -33,7 +33,7 @@ namespace Job.Logger.Core
         public LogMessageEntity WarningMessage(string warningMessage)
         {
             LogMessageEntity response = null;
-            if (AllowedMessages.HasFlag(MessageKind.Error))
+            if (AllowedMessages.HasFlag(MessageKind.Warning))
             {
                 response = new LogMessageEntity(warningMessage, MessageType.Warning);
             }
@@ -43,7 +43,7 @@ namespace Job.Logger.Core
         public LogMessageEntity SuccessMessage(string successMessage)
         {
             LogMessageEntity response = null;
-            if (AllowedMessages.HasFlag(MessageKind.Error))
+            if (AllowedMessages.HasFlag(MessageKind.Success))
             {
                 response = new LogMessageEntity(successMessage, MessageType.Success);
             }
